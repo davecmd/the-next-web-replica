@@ -197,9 +197,9 @@ button {
 .grid {
     display: grid;
     max-width: 1192px;
-    min-width: 500px;
+    min-width: 400px;
     padding: 20px;
-    grid-template-columns: repeat(12,minmax(35px,1fr));
+    grid-template-columns: repeat(12,minmax(10px,1fr));
     margin: 0 auto;
     grid-gap: 20px;
 
@@ -764,6 +764,7 @@ button {
     padding-left: 0;
     padding-right: 0;
     text-align: center;
+    overflow: hidden;
  
 }
 
@@ -803,7 +804,7 @@ button {
 
 .grid [class*="grid-4-item"]:nth-child(n):nth-child(-n+14) > :first-child{
     display: inline-block;
-    width: 70px;
+    max-width: 70px;
     height: 70px;
 }
 
@@ -842,4 +843,10 @@ button {
 .menu-header {
     display: inline-block;
 }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .navigation-message {
+            font-size: 10px;
+        }
     }
